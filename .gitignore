@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Environment variables (NEVER commit these)
+.env
+*/.env
+
+# Build output
+dist/
+build/
+*/dist/
+*/build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+*/coverage/
+
+# Uploads (if any temp files)
+uploads/

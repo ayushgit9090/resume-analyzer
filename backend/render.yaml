@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: resumeiq-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      # Set this to your Vercel frontend URL after deploying
+      - key: ALLOWED_ORIGIN
+        value: https://your-app.vercel.app
+      - key: RATE_LIMIT_MAX
+        value: 20
+      - key: RATE_LIMIT_WINDOW_MINUTES
+        value: 15
+      - key: MAX_FILE_SIZE_MB
+        value: 5
+      - key: OCR_TRIGGER_THRESHOLD
+        value: 100
